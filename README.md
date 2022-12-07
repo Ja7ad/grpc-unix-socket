@@ -41,7 +41,7 @@ Server-->>+Client: Serve message
 
 ## Test Benchmark and profiling
 
-- Profile result over unix socket ([Profiling Visualization Image](https://raw.githubusercontent.com/Ja7ad/grpc-unix-socket/master/assets/unix.svg)):
+- Profile result over unix socket 100k request ([Profiling Visualization Image](https://raw.githubusercontent.com/Ja7ad/grpc-unix-socket/master/assets/unix.svg)):
 
 ```shell
 goos: linux
@@ -49,10 +49,10 @@ goarch: amd64
 pkg: github.com/Ja7ad/grpc-unix-socket/server
 cpu: Intel(R) Core(TM) i5-3570 CPU @ 3.40GHz
 Benchmark_UNIX
-Benchmark_UNIX-4   	    8835	    125074 ns/op
+Benchmark_UNIX-4          100000            102187 ns/op            4960 B/op         96 allocs/op
 ```
 
-- Profile result over TCP ([Profiling Visualization Image](https://raw.githubusercontent.com/Ja7ad/grpc-unix-socket/master/assets/tcp.svg)):
+- Profile result over TCP 100k request ([Profiling Visualization Image](https://raw.githubusercontent.com/Ja7ad/grpc-unix-socket/master/assets/tcp.svg)):
 
 ```shell
 goos: linux
@@ -60,7 +60,7 @@ goarch: amd64
 pkg: github.com/Ja7ad/grpc-unix-socket/server
 cpu: Intel(R) Core(TM) i5-3570 CPU @ 3.40GHz
 Benchmark_TCP
-Benchmark_TCP-4    	    7501	    147191 ns/op 
+Benchmark_TCP-4           100000            127188 ns/op            4961 B/op         96 allocs/op
 ```
 
 ## UseCase
@@ -79,5 +79,5 @@ $ go run -mod vendor main.go
 
 - benchmark command :
 ```shell
-$ go test -bench=.
+$ go test -bench=. -benchtime=100000x -benchmem
 ```
