@@ -1,0 +1,46 @@
+goos: linux
+goarch: amd64
+pkg: github.com/Ja7ad/grpc-unix-socket
+cpu: Intel(R) Core(TM) i5-3570 CPU @ 3.40GHz
+Benchmark_UNIX-4   	  100000	    102154 ns/op	    4961 B/op	      96 allocs/op
+Benchmark_UNIX-4   	  100000	    101148 ns/op	    4960 B/op	      96 allocs/op
+Benchmark_UNIX-4   	  100000	    102188 ns/op	    4960 B/op	      96 allocs/op
+Benchmark_UNIX-4   	  100000	    101161 ns/op	    4960 B/op	      96 allocs/op
+Benchmark_UNIX-4   	  100000	    101192 ns/op	    4959 B/op	      96 allocs/op
+Benchmark_UNIX-4   	  100000	    101151 ns/op	    4960 B/op	      96 allocs/op
+Benchmark_UNIX-4   	  100000	     99137 ns/op	    4959 B/op	      96 allocs/op
+Benchmark_UNIX-4   	  100000	    100201 ns/op	    4959 B/op	      96 allocs/op
+Benchmark_UNIX-4   	  100000	     99171 ns/op	    4959 B/op	      96 allocs/op
+Benchmark_UNIX-4   	  100000	     99150 ns/op	    4959 B/op	      96 allocs/op
+Benchmark_UNIX-4   	  100000	    100187 ns/op	    4958 B/op	      96 allocs/op
+Benchmark_UNIX-4   	  100000	    100150 ns/op	    4959 B/op	      96 allocs/op
+Benchmark_UNIX-4   	  100000	     99141 ns/op	    4959 B/op	      96 allocs/op
+Benchmark_UNIX-4   	  100000	     99123 ns/op	    4958 B/op	      96 allocs/op
+Benchmark_UNIX-4   	  100000	     99109 ns/op	    4958 B/op	      96 allocs/op
+Benchmark_UNIX-4   	  100000	    100162 ns/op	    4958 B/op	      96 allocs/op
+Benchmark_UNIX-4   	  100000	     99144 ns/op	    4958 B/op	      96 allocs/op
+Benchmark_UNIX-4   	  100000	     99167 ns/op	    4958 B/op	      96 allocs/op
+Benchmark_UNIX-4   	  100000	     99138 ns/op	    4958 B/op	      96 allocs/op
+Benchmark_UNIX-4   	  100000	     99112 ns/op	    4958 B/op	      96 allocs/op
+Benchmark_TCP-4    	  100000	    124209 ns/op	    4958 B/op	      96 allocs/op
+Benchmark_TCP-4    	  100000	    124158 ns/op	    4958 B/op	      96 allocs/op
+Benchmark_TCP-4    	  100000	    125150 ns/op	    4958 B/op	      96 allocs/op
+Benchmark_TCP-4    	  100000	    124148 ns/op	    4958 B/op	      96 allocs/op
+Benchmark_TCP-4    	  100000	    125144 ns/op	    4958 B/op	      96 allocs/op
+Benchmark_TCP-4    	  100000	    125145 ns/op	    4958 B/op	      96 allocs/op
+Benchmark_TCP-4    	  100000	    124142 ns/op	    4958 B/op	      96 allocs/op
+Benchmark_TCP-4    	  100000	    124213 ns/op	    4957 B/op	      96 allocs/op
+Benchmark_TCP-4    	  100000	    124167 ns/op	    4958 B/op	      96 allocs/op
+Benchmark_TCP-4    	  100000	    124159 ns/op	    4958 B/op	      96 allocs/op
+Benchmark_TCP-4    	  100000	    124158 ns/op	    4958 B/op	      96 allocs/op
+Benchmark_TCP-4    	  100000	    124114 ns/op	    4958 B/op	      96 allocs/op
+Benchmark_TCP-4    	  100000	    124136 ns/op	    4957 B/op	      96 allocs/op
+Benchmark_TCP-4    	  100000	    125171 ns/op	    4958 B/op	      96 allocs/op
+Benchmark_TCP-4    	  100000	    124180 ns/op	    4958 B/op	      96 allocs/op
+Benchmark_TCP-4    	  100000	    124177 ns/op	    4958 B/op	      96 allocs/op
+Benchmark_TCP-4    	  100000	    125189 ns/op	    4958 B/op	      96 allocs/op
+Benchmark_TCP-4    	  100000	    124169 ns/op	    4958 B/op	      96 allocs/op
+Benchmark_TCP-4    	  100000	    125142 ns/op	    4958 B/op	      96 allocs/op
+Benchmark_TCP-4    	  100000	    124159 ns/op	    4958 B/op	      96 allocs/op
+PASS
+ok  	github.com/Ja7ad/grpc-unix-socket	457.296s

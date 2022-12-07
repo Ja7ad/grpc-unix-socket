@@ -63,6 +63,22 @@ Benchmark_TCP
 Benchmark_TCP-4           100000            127188 ns/op            4961 B/op         96 allocs/op
 ```
 
+### Result of 100k benchmark with 20 time test as new/old (benchstat)
+
+```shell
+name     old time/op    new time/op    delta
+_UNIX-4     100µs ± 2%     100µs ± 2%    ~     (p=0.668 n=17+20)
+_TCP-4      125µs ± 1%     124µs ± 1%  -0.15%  (p=0.031 n=20+20)
+
+name     old alloc/op   new alloc/op   delta
+_UNIX-4    4.96kB ± 0%    4.96kB ± 0%    ~     (p=0.454 n=20+20)
+_TCP-4     4.96kB ± 0%    4.96kB ± 0%    ~     (all equal)
+
+name     old allocs/op  new allocs/op  delta
+_UNIX-4      96.0 ± 0%      96.0 ± 0%    ~     (all equal)
+_TCP-4       96.0 ± 0%      96.0 ± 0%    ~     (all equal)
+```
+
 ## UseCase
 
 When you run many services on the same machine and run them in containers or hosts, you can use unix sockets for efficient and fast communication.
@@ -74,7 +90,7 @@ Containers need to share sock files via volumes, since unix sockets are over soc
 Server :
 - run server (go1.19) :
 ```shell
-$ go run -mod vendor main.go
+$ go run -mod vendor grpc.go
 ```
 
 - benchmark command :
