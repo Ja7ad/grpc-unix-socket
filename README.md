@@ -15,7 +15,7 @@ In order to transmit data between processes, the file system provides a reliable
 ```mermaid
 sequenceDiagram
 
-Client->>+Server: Health Request (1.829455ms per response)
+Client->>+Server: Health Request (1.02187 µs per response)
 
 Server->>+Client: Serve message
 ```
@@ -33,7 +33,7 @@ A TCP/IP socket is a mechanism for communicating between processes over a networ
 ```mermaid
 sequenceDiagram
 
-Client->>+Server: Health Request (2.825977ms)
+Client->>+Server: Health Request (1.27188 µs per response)
 
 Server-->>+Client: Serve message
 ```
