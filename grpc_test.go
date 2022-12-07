@@ -30,7 +30,7 @@ func Benchmark_UNIX(b *testing.B) {
 
 	conn, err := grpc.Dial(SOCKET, grpc.WithInsecure(), grpc.WithDialer(dialer))
 	if err != nil {
-		log.Fatal(err)
+		b.Fatal(err)
 	}
 
 	health := grpc_health_v1.NewHealthClient(conn)
@@ -58,7 +58,7 @@ func Benchmark_TCP(b *testing.B) {
 
 	conn, err := grpc.Dial(ADDR, grpc.WithInsecure())
 	if err != nil {
-		log.Fatal(err)
+		b.Fatal(err)
 	}
 
 	health := grpc_health_v1.NewHealthClient(conn)
@@ -67,7 +67,7 @@ func Benchmark_TCP(b *testing.B) {
 	for i := 0; i < b.N; i++ {
 		_, err := health.Check(ctx, &grpc_health_v1.HealthCheckRequest{})
 		if err != nil {
-			log.Fatal(err)
+			b.Fatal(err)
 		}
 	}
 }
