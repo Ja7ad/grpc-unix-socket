@@ -40,14 +40,14 @@ Server-->>+Client: Serve message
 
 ## Test Benchmark and profiling
 
-- Profile result over unix socket 10k request ([Profiling Visualization Image](client/socket/unix.svg)):
+- Profile result over unix socket 10k request ([Profiling Visualization Image](https://raw.githubusercontent.com/Ja7ad/grpc-unix-socket/master/client/socket/unix.svg)):
 
 ```shell
 2022/12/07 08:53:42 9999 : server status is SERVING
 2022/12/07 08:53:42 10k request to unix socket took 1.400293876s 
 ```
 
-- Profile result over TCP 10k request ([Profiling Visualization Image](client/tcp/tcp.svg)):
+- Profile result over TCP 10k request ([Profiling Visualization Image](https://raw.githubusercontent.com/Ja7ad/grpc-unix-socket/master/client/tcp/tcp.svg)):
 
 ```shell
 2022/12/07 08:52:52 9999 : server status is SERVING
