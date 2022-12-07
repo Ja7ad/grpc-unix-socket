@@ -85,6 +85,12 @@ When you run many services on the same machine and run them in containers or hos
 
 Containers need to share sock files via volumes, since unix sockets are over socket files.
 
+```shell
+docker volume create --name=socket
+docker run socket:/var/socket serviceA
+docker run socket:/var/socket serviceB
+```
+
 ## How to test server/client?
 
 Server :
