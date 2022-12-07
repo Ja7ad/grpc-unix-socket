@@ -1,6 +1,7 @@
 # GRPC over unix socket Protocol
 
 Unix sockets, or Unix Domain Sockets, allow bidirectional data exchange between processes running on the same machine.
+In order to transmit data between processes, the file system provides a reliable and efficient mechanism. The kernel is the only component involved in communication between processes. The processes communicate by reading and writing to the same socket file, which is managed by the kernel. Kernels handle communication details, such as synchronization, buffering, and error handling, and ensure that data is delivered reliably and correctly.
 
 **Advantage :** 
 - Fast communication 
@@ -40,7 +41,7 @@ Server-->>+Client: Serve message
 
 ## Test Benchmark and profiling
 
-- Profile result over unix socket 10k request ([Profiling Visualization Image](assets/unix.svg)):
+- Profile result over unix socket 10k request ([Profiling Visualization Image](https://raw.githubusercontent.com/Ja7ad/grpc-unix-socket/master/assets/unix.svg)):
 
 ```shell
 goos: linux
@@ -51,7 +52,7 @@ Benchmark_UNIX
 Benchmark_UNIX-4   	    8835	    125074 ns/op
 ```
 
-- Profile result over TCP 10k request ([Profiling Visualization Image](assets/tcp.svg)):
+- Profile result over TCP 10k request ([Profiling Visualization Image](https://raw.githubusercontent.com/Ja7ad/grpc-unix-socket/master/assets/tcp.svg)):
 
 ```shell
 goos: linux
