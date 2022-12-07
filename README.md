@@ -41,7 +41,7 @@ Server-->>+Client: Serve message
 
 ## Test Benchmark and profiling
 
-- Profile result over unix socket 10k request ([Profiling Visualization Image](https://raw.githubusercontent.com/Ja7ad/grpc-unix-socket/master/assets/unix.svg)):
+- Profile result over unix socket ([Profiling Visualization Image](https://raw.githubusercontent.com/Ja7ad/grpc-unix-socket/master/assets/unix.svg)):
 
 ```shell
 goos: linux
@@ -52,7 +52,7 @@ Benchmark_UNIX
 Benchmark_UNIX-4   	    8835	    125074 ns/op
 ```
 
-- Profile result over TCP 10k request ([Profiling Visualization Image](https://raw.githubusercontent.com/Ja7ad/grpc-unix-socket/master/assets/tcp.svg)):
+- Profile result over TCP ([Profiling Visualization Image](https://raw.githubusercontent.com/Ja7ad/grpc-unix-socket/master/assets/tcp.svg)):
 
 ```shell
 goos: linux
