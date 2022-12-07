@@ -40,18 +40,26 @@ Server-->>+Client: Serve message
 
 ## Test Benchmark and profiling
 
-- Profile result over unix socket 10k request ([Profiling Visualization Image](client/socket/unix.svg)):
+- Profile result over unix socket 10k request ([Profiling Visualization Image](assets/unix.svg)):
 
 ```shell
-2022/12/07 08:53:42 9999 : server status is SERVING
-2022/12/07 08:53:42 10k request to unix socket took 1.400293876s 
+goos: linux
+goarch: amd64
+pkg: github.com/Ja7ad/grpc-unix-socket/server
+cpu: Intel(R) Core(TM) i5-3570 CPU @ 3.40GHz
+Benchmark_UNIX
+Benchmark_UNIX-4   	    8835	    125074 ns/op
 ```
 
-- Profile result over TCP 10k request ([Profiling Visualization Image](client/tcp/tcp.svg)):
+- Profile result over TCP 10k request ([Profiling Visualization Image](assets/tcp.svg)):
 
 ```shell
-2022/12/07 08:52:52 9999 : server status is SERVING
-2022/12/07 08:52:52 10k request to tcp protocol took 1.726000498s 
+goos: linux
+goarch: amd64
+pkg: github.com/Ja7ad/grpc-unix-socket/server
+cpu: Intel(R) Core(TM) i5-3570 CPU @ 3.40GHz
+Benchmark_TCP
+Benchmark_TCP-4    	    7501	    147191 ns/op 
 ```
 
 ## UseCase
@@ -63,13 +71,12 @@ Containers need to share sock files via volumes, since unix sockets are over soc
 ## How to test server/client?
 
 Server :
-- run server in `server` folder (go1.19) :
+- run server (go1.19) :
 ```shell
 $ go run -mod vendor main.go
 ```
 
-Client :
-- run client tcp or socket in `client` folder :
+- benchmark command :
 ```shell
-$ go run -mod vendor main.go
+$ go test -bench=.
 ```
