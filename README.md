@@ -63,7 +63,7 @@ Benchmark_TCP
 Benchmark_TCP-4           100000            127188 ns/op            4961 B/op         96 allocs/op
 ```
 
-### Result of 100k benchmark with 20 time test as new/old (benchstat)
+### Result of 100k request benchmark with 20 time test as new/old (benchstat)
 
 ```shell
 name     old time/op    new time/op    delta
